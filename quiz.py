@@ -6,8 +6,8 @@ import requests
 
 class QuizGenerator:
     
+    
     def __init__(self):
-        """Takes category in form of integer (17, etc)"""
         parameters = {"amount":10,"difficulty":"medium", "type":"boolean"}
         self.res = requests.get("https://opentdb.com/api.php", params=parameters)
         self.res.raise_for_status()
